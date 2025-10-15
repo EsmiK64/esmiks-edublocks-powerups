@@ -26,12 +26,13 @@ Blockly.Blocks['function_call_with_return'] = {
             .appendField("(");
         this.appendValueInput("ARGS")
             .setCheck(null)
-        this.appendField(")")
+        this.appendDummyInput()
+            .appendField(")")
             
         this.setInputsInline(true);
         this.setColour(controlColor);
+        this.setOutput(true, null);
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
-        this.setOutput(true, null);
     }
 };
