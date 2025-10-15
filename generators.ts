@@ -14,3 +14,13 @@ ${exceptCode}`;
 
     return code;
 };
+
+Blockly.Python['function_call_with_return'] = function(block) {
+    const functionName = block.getFieldValue('FUNC_NAME');
+    
+    const args = Blockly.Python.valueToCode(block, 'ARGS', Blockly.Python.ORDER_ATOMIC) || '';
+
+    const code = `${functionName}(${args})`;
+
+    return [code, Blockly.Python.ORDER_FUNCTION_CALL];
+};
