@@ -3,5 +3,11 @@
     <block type="try_except_statement"></block>
 
     <label text="Functions"></label>
-    <block type="function_call_with_return"></block>
+    <block type="function_call_with_return">
+        <value name="ARGS">
+            <shadow type="parameters">
+                <mutation color="#9a5c00ff" items="1" inputType="string" />
+            </shadow>
+        </value>
+    </block>
 </category>

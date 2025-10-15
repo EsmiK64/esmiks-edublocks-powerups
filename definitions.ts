@@ -20,14 +20,18 @@ Blockly.Blocks['try_except_statement'] = {
 
 Blockly.Blocks['function_call_with_return'] = {
     init: function() {
-        this.appendValueInput("ARGS")
-            .setCheck(null)
+        this.appendDummyInput()
             .appendField("function")
             .appendField(new Blockly.FieldTextInput("my_function"), "FUNC_NAME")
-            .appendField("arguments:");
+            .appendField("(");
+        this.appendValueInput("ARGS")
+            .setCheck(null)
+        this.appendField(")")
             
         this.setInputsInline(true);
         this.setColour(controlColor);
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
         this.setOutput(true, null);
     }
 };
