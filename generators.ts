@@ -13,6 +13,7 @@ ${tryCode}except Exception as ${exceptionVar}:
 ${exceptCode}`;
 
     return code;
+<<<<<<< HEAD
 };
 
 Blockly.Python['function_call_with_return'] = function(block) {
@@ -22,4 +23,6 @@ Blockly.Python['function_call_with_return'] = function(block) {
     const code = `${functionName}(${args})`;
     
     return [code, Blockly.Python.ORDER_FUNCTION_CALL];
+=======
+>>>>>>> parent of 5316b9f (functino calls)
 };

@@ -1,15 +1,7 @@
 <category name="Control Flow" colour="#ff9800" css-icon="customIcon fad fa-code-branch">
     <label text="Error Handling"></label>
-    
     <block type="try_except_statement"></block>
     
     <label text="Function Calls"></label>
-    
-    <block type="function_call_with_return">
-        <value name="ARGS">
-            <shadow type="inline_string">
-                <field name="value">arg1, arg2</field>
-            </shadow>
-        </value>
-    </block>
+    <block type="function_call_with_return"></block>
 </category>
