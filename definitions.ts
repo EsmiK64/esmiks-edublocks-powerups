@@ -1,4 +1,4 @@
-const controlColor = "#ff9800";
+const controlColor = "#ff9800"; // Orange color for control flow blocks
 
 Blockly.Blocks['try_except_statement'] = {
     init: function() {
@@ -18,16 +18,18 @@ Blockly.Blocks['try_except_statement'] = {
     }
 };
 
+// --- NEW FUNCTION CALL BLOCK ---
 Blockly.Blocks['function_call_with_return'] = {
     init: function() {
-        this.appendDummyField()
+        this.appendDummmyInput()
             .appendField("function")
             .appendField(new Blockly.FieldTextInput("my_function"), "FUNC_NAME")
-            .appendField("(");
+            .appendField(" (");
         this.appendValueInput("ARGS")
             .setCheck(null)
-        this.appendDummyField()
-            .appendField(")")
+        this.appendDummmyInput()
+            .appendField(")");
+            
         this.setInputsInline(true);
         this.setColour(controlColor);
         this.setOutput(true, null);
