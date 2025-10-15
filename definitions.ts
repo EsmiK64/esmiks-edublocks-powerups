@@ -1,4 +1,4 @@
-const controlColor = "#ff9800"; 
+const controlColor = "#ff9800";
 
 Blockly.Blocks['try_except_statement'] = {
     init: function() {
@@ -8,7 +8,9 @@ Blockly.Blocks['try_except_statement'] = {
       
       this.appendStatementInput("EXCEPT_CODE")
           .setCheck(null)
-          .appendField("except Exception as e:");
+          .appendField("except Exception as")
+          .appendField(new Blockly.FieldVariable("e"), "EXCEPTION_VARIABLE")
+          .appendField(":");
           
       this.setColour(controlColor);
       this.setPreviousStatement(true, null);
