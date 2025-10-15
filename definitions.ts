@@ -32,6 +32,7 @@ Blockly.Blocks['function_call_with_return'] = {
             
         this.setInputsInline(true);
         this.setColour(controlColor);
+        this.setPreviousStatement(true, null);
         this.setOutput(true, null);
     }
 };
