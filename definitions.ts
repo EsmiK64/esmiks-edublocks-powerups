@@ -1,5 +1,3 @@
-import * as Blockly from 'blockly/core';
-
 // --- A. Conceptual Standard Blocks (Function Call & Try/Except) ---
 
 // Block for Function Call (assuming a simple named function)
