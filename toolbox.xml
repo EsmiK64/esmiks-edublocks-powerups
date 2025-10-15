@@ -1,7 +1,66 @@
-<category name="Control Flow" colour="#ff9800" css-icon="customIcon fad fa-code-branch">
-    <label text="Error Handling"></label>
-    <block type="try_except_statement"></block>
-    
-<!-- <label text="Function Calls"></label>
-    <block type="function_call_with_return"></block> -->
-</category>
+  <category name="Utility" colour="180">
+    <block type="python_function_call">
+      <value name="ARGS">
+        <block type="text">
+          <field name="TEXT">'data', 123</field>
+        </block>
+      </value>
+    </block>
+    <block type="python_try_except">
+      <statement name="TRY">
+        <block type="python_function_call">
+          <field name="NAME">read_file</field>
+        </block>
+      </statement>
+      <statement name="CATCH">
+        <block type="text_print">
+          <value name="TEXT">
+            <block type="text">
+              <field name="TEXT">An error occurred!</field>
+            </block>
+          </value>
+        </block>
+      </statement>
+    </block>
+  </category>
+
+  <category name="Advanced Python" colour="290">
+    <block type="python_list_comprehension">
+      <value name="EXPRESSION">
+        <block type="math_arithmetic">
+          <field name="OP">MULTIPLY</field>
+          <value name="A">
+            <block type="variables_get">
+              <field name="VAR">item</field>
+            </block>
+          </value>
+          <value name="B">
+            <block type="math_number"><field name="NUM">2</field></block>
+          </value>
+        </block>
+      </value>
+      <value name="ITERABLE">
+        <block type="text"><field name="TEXT">my_list</field></block>
+      </value>
+    </block>
+    <block type="python_flexible_function_def"></block>
+    <block type="python_simple_decorator">
+      <value name="DECORATOR_NAME">
+        <block type="text">
+          <field name="TEXT">validate_input</field>
+        </block>
+      </value>
+    </block>
+    <block type="python_context_manager">
+      <value name="RESOURCE">
+        <block type="text">
+          <field name="TEXT">open("settings.cfg", "r")</field>
+        </block>
+      </value>
+    </block>
+    <block type="python_generator_function">
+      <value name="YIELD_EXPRESSION">
+        <block type="variables_get"><field name="VAR">i</field></block>
+      </value>
+    </block>
+  </category>
