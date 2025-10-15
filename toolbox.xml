@@ -2,6 +2,6 @@
     <label text="Error Handling"></label>
     <block type="try_except_statement"></block>
     
-    <label text="Function Calls"></label>
-    <block type="function_call_with_return"></block>
+<!--     <label text="Function Calls"></label>
+    <block type="function_call_with_return"></block> -->
 </category>
