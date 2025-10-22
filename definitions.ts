@@ -1,33 +1,28 @@
 const controlColor = "#ff9800";
 
 Blockly.Blocks['try_except_statement'] = {
-    init: function() {
-      this.appendStatementInput("TRY_CODE")
-          .setCheck(null)
-          .appendField("try");
-      
-      this.appendStatementInput("EXCEPT_CODE")
-          .setCheck(null)
-          .appendField("except Exception as")
-          .appendField(new Blockly.FieldVariable("e"), "EXCEPTION_VARIABLE")
-          .appendField(":");
-          
-      this.setColour(controlColor);
-      this.setPreviousStatement(true, null);
-      this.setNextStatement(true, null);
+    init: function () {
+        this.appendDummyInput().appendField("try");
+        this.appendStatementInput("TRY_CODE").setCheck(null);
+
+        this.appendDummyInput().appendField("except Exception as");
+        this.appendField(new Blockly.FieldVariable("e"), "EXCEPTION_VARIABLE");
+        this.appendDummyInput().appendField(":");
+        this.appendStatementInput("EXCEPT_CODE").setCheck(null);
+
+        this.setInputsInline(!0);
+        this.setOutput(!0, null);
+        this.setColour(controlColor);
     }
 };
 
 Blockly.Blocks['function_call_with_return'] = {
-    init: function() {
-        this.appendValueInput("ARGS")
-            .setCheck(null)
-            .appendField("function")
-            .appendField(new Blockly.FieldTextInput("my_function"), "FUNC_NAME")
-            .appendField("arguments:");
-        this.appendValueInput("ARGS")
-            .setCheck(null)
-            
+    init: function () {
+        this.appendDummyInput().appendField("function");
+        this.appendValueInput("FUNC_NAME").setCheck("String");
+        this.appendDummyInput().appendField("arguments:");
+        this.appendValueInput("ARGS").setCheck(null);
+
         this.setInputsInline(!0);
         this.setOutput(!0, null);
         this.setColour(controlColor);
