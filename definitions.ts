@@ -13,7 +13,6 @@ Blockly.Blocks['try_except_statement'] = {
         this.setPreviousStatement(true, null);
         this.setNextStatement(true, null);
         this.setInputsInline(!0);
-        this.setOutput(!0, null);
         this.setColour(controlColor);
     }
 };
