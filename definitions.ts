@@ -1,4 +1,4 @@
-import * as Blockly from 'blockly/core';
+// Note: EduBlocks loads this file via a plain <script> (not ESM). Use global Blockly, no imports.
 
 // --- A. Conceptual Standard Blocks (Function Call & Try/Except) ---
 
