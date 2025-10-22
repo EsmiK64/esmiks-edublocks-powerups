@@ -13,8 +13,10 @@ Blockly.Python['try_except_statement'] = function(block) {
 };
 
 Blockly.Python['function_call_with_return'] = function(block) {
-    const functionName = block.getFieldValue('FUNC_NAME');
-    const args = Blockly.Python.valueToCode(block, 'ARGS', Blockly.Python.ORDER_ATOMIC) || '';
+    const functionName = Blockly.Python.nameDB_.getName(
+        block.getFieldValue("FUNC_NAME"),
+        Blockly.VARIABLE_CATEGORY_NAME);
+    const args = Blockly.Python.valueToCode(block, 'ARGS', 0);
     const code = `${functionName}(${args})`;
     return [code, Blockly.Python.ORDER_FUNCTION_CALL];
 };

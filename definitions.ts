@@ -25,9 +25,11 @@ Blockly.Blocks['function_call_with_return'] = {
             .appendField("function")
             .appendField(new Blockly.FieldTextInput("my_function"), "FUNC_NAME")
             .appendField("arguments:");
+        this.appendValueInput("ARGS")
+            .setCheck(null)
             
-        this.setInputsInline(true);
+        this.setInputsInline(!0);
+        this.setOutput(!0, null);
         this.setColour(controlColor);
-        this.setOutput(true, null);
     }
 };
