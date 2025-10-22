@@ -6,7 +6,7 @@ Blockly.Blocks['try_except_statement'] = {
         this.appendStatementInput("TRY_CODE").setCheck(null);
 
         this.appendDummyInput().appendField("except Exception as");
-        this.appendField(new Blockly.FieldVariable("e"), "EXCEPTION_VARIABLE");
+        this.appendDummyInput().appendField(new Blockly.FieldVariable("e"), "EXCEPTION_VARIABLE");
         this.appendDummyInput().appendField(":");
         this.appendStatementInput("EXCEPT_CODE").setCheck(null);
 
