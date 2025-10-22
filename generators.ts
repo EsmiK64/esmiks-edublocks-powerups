@@ -7,12 +7,9 @@ Blockly.Python['try_except_statement'] = function(block) {
         Blockly.VARIABLE_CATEGORY_NAME
     );
 
-    const code = 
-`try:
-${tryCode}except Exception as ${exceptionVar}:
-${exceptCode}`;
+    const code = `try:\n${tryCode}except Exception as ${exceptionVar}:\n${exceptCode}`;
 
-    return code;
+    return code + '\n';
 };
 
 Blockly.Python['function_call_with_return'] = function(block) {

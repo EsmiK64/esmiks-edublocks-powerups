@@ -1,5 +1,7 @@
 {
     "mode": "python",
-    "code": [],
+    "code": [
+        "powerups.py"
+    ],
     "interpreter": "py"
 }
