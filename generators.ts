@@ -1,3 +1,6 @@
+import * as Blockly from 'blockly/core';
+import 'blockly/python';
+
 // --- A. Conceptual Standard Blocks (Function Call & Try/Except) ---
 
 // Generator for Function Call

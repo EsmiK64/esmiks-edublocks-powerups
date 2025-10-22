@@ -1,3 +1,4 @@
+<xml id="toolbox" style="display: none">
   <category name="Utility" colour="180">
     <block type="python_function_call">
       <value name="ARGS">
@@ -64,3 +65,4 @@
       </value>
     </block>
   </category>
+</xml>
