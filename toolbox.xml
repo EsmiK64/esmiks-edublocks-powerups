@@ -3,5 +3,25 @@
     <block type="try_except_statement"></block>
     
     <label text="Function Calls"></label>
-    <block type="function_call_with_return"></block>
+    <block type="function_call_with_return">
+        <value name="FUNC_NAME">
+            <shadow type="text">
+            <mutation color="#c51a4a" items="1" limit="1" inputType="string" />
+                <value name="function_name">
+                    <shadow type="inline_string">
+                        <field name="value">function_name</field>
+                    </shadow>
+                </value></shadow>
+        </value>
+        <value name="ARGS">
+            <shadow type="parameters">
+                <mutation color="#c51a4a" items="1" inputType="string" />
+                <value name="arg_1">
+                    <shadow type="inline_string">
+                        <field name="value">arg_1</field>
+                    </shadow>
+                </value>
+            </shadow>
+        </value>
+    </block>
 </category>
