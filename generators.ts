@@ -16,7 +16,7 @@ Blockly.Python['try_except_statement'] = function(block) {
 // --- B. Advanced Blocks ---
 
 // Generator for List Comprehension
-Blockly.Python['python_list_comprehension'] = function(block: Blockly.Block) {
+Blockly.Python['python_list_comprehension'] = function(block) {
   const expression = Blockly.Python.valueToCode(block, 'EXPRESSION', Blockly.Python.ORDER_NONE) || 'None';
   const itemVar = block.getFieldValue('ITEM_VAR');
   const iterable = Blockly.Python.valueToCode(block, 'ITERABLE', Blockly.Python.ORDER_NONE) || '[]';
@@ -33,13 +33,13 @@ Blockly.Python['python_list_comprehension'] = function(block: Blockly.Block) {
 };
 
 // Generator for Flexible Function Definition
-Blockly.Python['python_flexible_function_def'] = function(block: Blockly.Block) {
+Blockly.Python['python_flexible_function_def'] = function(block) {
   const name = block.getFieldValue('NAME');
   const useArgs = block.getFieldValue('USE_ARGS') === 'TRUE';
   const useKwargs = block.getFieldValue('USE_KWARGS') === 'TRUE';
   const codeBlock = Blockly.Python.statementToCode(block, 'DO');
 
-  const params: string[] = [];
+  const params = [];
   if (useArgs) {
     params.push('*args');
   }
@@ -53,7 +53,7 @@ Blockly.Python['python_flexible_function_def'] = function(block: Blockly.Block) 
 };
 
 // Generator for Simple Decorator application
-Blockly.Python['python_simple_decorator'] = function(block: Blockly.Block) {
+Blockly.Python['python_simple_decorator'] = function(block) {
   const decoratorName = Blockly.Python.valueToCode(block, 'DECORATOR_NAME', Blockly.Python.ORDER_ATOMIC) || 'my_decorator';
   const functionDefinition = Blockly.Python.statementToCode(block, 'FUNCTION_DEFINITION');
 
@@ -62,7 +62,7 @@ Blockly.Python['python_simple_decorator'] = function(block: Blockly.Block) {
 };
 
 // Generator for Context Manager (with statement)
-Blockly.Python['python_context_manager'] = function(block: Blockly.Block) {
+Blockly.Python['python_context_manager'] = function(block) {
   const resource = Blockly.Python.valueToCode(block, 'RESOURCE', Blockly.Python.ORDER_NONE) || 'None';
   const asVariable = block.getFieldValue('AS_VARIABLE');
   const codeBlock = Blockly.Python.statementToCode(block, 'DO');
@@ -72,7 +72,7 @@ Blockly.Python['python_context_manager'] = function(block: Blockly.Block) {
 };
 
 // Generator for Generator Function (using yield)
-Blockly.Python['python_generator_function'] = function(block: Blockly.Block) {
+Blockly.Python['python_generator_function'] = function(block) {
   const name = block.getFieldValue('NAME');
   const yieldExpression = Blockly.Python.valueToCode(block, 'YIELD_EXPRESSION', Blockly.Python.ORDER_NONE) || 'None';
   
