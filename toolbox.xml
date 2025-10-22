@@ -5,7 +5,7 @@
     <label text="Function Calls"></label>
     <block type="function_call_with_return">
         <value name="FUNC_NAME">
-            <shadow type="text">
+            <shadow type="parameters">
             <mutation color="#c51a4a" items="1" limit="1" inputType="string" />
                 <value name="function_name">
                     <shadow type="inline_string">
