@@ -20,7 +20,7 @@ Blockly.Blocks['try_except_statement'] = {
 Blockly.Blocks['function_call_with_return'] = {
     init: function () {
         this.appendDummyInput().appendField("function");
-        this.appendValueInput("FUNC_NAME").setCheck("String");
+        this.appendValueInput("FUNC_NAME").setCheck(null);
         this.appendDummyInput().appendField("arguments:");
         this.appendValueInput("ARGS").setCheck(null);
 
