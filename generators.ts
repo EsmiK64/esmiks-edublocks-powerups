@@ -1,24 +1,15 @@
-import * as Blockly from 'blockly/core';
-import 'blockly/python';
+Blockly.Python['try_except_statement'] = function(block) {
+    const tryCode = Blockly.Python.statementToCode(block, 'TRY_CODE');
+    const exceptCode = Blockly.Python.statementToCode(block, 'EXCEPT_CODE');
+    
+    const exceptionVar = Blockly.Python.nameDB_.getName(
+        block.getFieldValue('EXCEPTION_VARIABLE'),
+        Blockly.VARIABLE_CATEGORY_NAME
+    );
 
-// --- A. Conceptual Standard Blocks (Function Call & Try/Except) ---
+    const code = `try:\n${tryCode}except Exception as ${exceptionVar}:\n${exceptCode}`;
 
-// Generator for Function Call
-Blockly.Python['python_function_call'] = function(block: Blockly.Block) {
-  const name = block.getFieldValue('NAME');
-  const args = Blockly.Python.valueToCode(block, 'ARGS', Blockly.Python.ORDER_ATOMIC) || '';
-  const code = `${name}(${args})\n`;
-  return code;
-};
-
-// Generator for Generic Try/Except
-Blockly.Python['python_try_except'] = function(block: Blockly.Block) {
-  const tryCode = Blockly.Python.statementToCode(block, 'TRY');
-  const catchCode = Blockly.Python.statementToCode(block, 'CATCH');
-
-  // Python convention uses 'except Exception as e:' for a generic catch.
-  const code = `try:\n${tryCode}\nexcept Exception as e:\n${catchCode || Blockly.Python.PASS}\n`;
-  return code;
+    return code + '\n';
 };
 
 
